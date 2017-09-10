@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<body>
+	<div id="mydiv" class="note"> note</div>
+	<div id="mydiv1" class="note"> note1</div>
+	<div id="mydiv2" class="note"> note2</div>
+	<form>
+		<label>name:</label>
+		<input type="" name="">
+		<fieldset>
+			<label>new fieldset</label>
+			<input type="" name="">
+		</fieldset>
+	</form>
+	<input type="" name="">
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		console.log($('#mydiv'));
+		console.log($('div'));
+		console.log($('*'));
+		console.log($('form input'));
+		console.log($('form > input'));
+	});
+</script>
