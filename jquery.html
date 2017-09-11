@@ -78,6 +78,16 @@
 		});
 		console.log(postdata);
 		$('img').removeAttr('src');
-		$('#img').attr('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJFPZIf9ZhAv7Ttx-yBRD6v5MQANhI7wz76SWmguccLjHzsNp0lYU4qg')
+		$('#img').attr('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJFPZIf9ZhAv7Ttx-yBRD6v5MQANhI7wz76SWmguccLjHzsNp0lYU4qg');
+		$('p').css({color:'#f11',background:'blue'});
+		// var p =$('p:last');
+		// var offset = p.offset();
+		// p.html( "left: " + offset.left + ", top: " + offset.top );
+		// var p = $('p:first');
+		// var position = p.position();
+		// p.html("left:"+position.left+",top:"+ position.top);
+		$('p:last').text("scollTop:"+$('p:first').scollTop());
+		$('p').height(200);
+		$('p:first').append('<b>helle</b>');
 	});
 </script>
