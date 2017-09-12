@@ -8,6 +8,8 @@
 	<div id="mydiv" class="note"> note</div>
 	<div id="mydiv1" class="note"> note1</div>
 	<div id="mydiv2" class="note"> note2</div>
+	<div id="mydiv3" class="protected" style="position: relative;">点击动画</div><div></div>
+
 	<form>
 		<label>name:</label>
 		<input type="" name="">
@@ -53,6 +55,7 @@
 	</form>
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJFPZIf9ZhAv7Ttx-yBRD6v5MQANhI7wz76SWmguccLjHzsNp0lYU4qg">
 	<img src="" id="img">
+	<div style="display: none" id="show">显示吧</div>
 </body>
 </html>
 <script type="text/javascript">
@@ -86,8 +89,20 @@
 		// var p = $('p:first');
 		// var position = p.position();
 		// p.html("left:"+position.left+",top:"+ position.top);
-		$('p:last').text("scollTop:"+$('p:first').scollTop());
+		// $('p:last').text("scollTop:"+$('p:first').scollTop());
 		$('p').height(200);
 		$('p:first').append('<b>helle</b>');
+		$('#mydiv3').click(function(){
+			if($(this).hasClass('protected')){	
+				$(this).animate({ left: '100px' })
+				   .animate({ left: 10 })
+      .animate({ left: -10 })
+      .animate({ left: 10 })
+      .animate({ left: 0 })
+			}
+		});
+		$('#show').show('fast',function(){
+			$(this).text('6666');
+		});
 	});
 </script>
